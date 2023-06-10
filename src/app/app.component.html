@@ -1,0 +1,36 @@
+<h2 style="text-align: center;">Login Form</h2>
+<h4>Enter the Name:</h4>
+<input type="text" class="form-control" [(ngModel)]="entername">
+
+<h4>Enter Address></h4>
+<input type="text" class="form-control" [(ngModel)]="enteraddress">
+<button id="myButton1" class="btn-primary" name="submitButton" (click)="viewdata()">Click me</button>
+<h4>{{value}}</h4>
+<app-form  [parentdata1]="parentdata1" [parentdata2]="parentdata2" (sendData)="sendData($event)"></app-form>
+   
+
+
+<h3 style="text-align: center;">Product details in Table</h3>
+<h4>Enter the ProductId</h4>
+<input type="text" class="btn-primary" [(ngModel)]="productId">
+<h4>Enter the Product name</h4>
+<input type="text" class="btn-primary" [(ngModel)]="productname">
+<h4>Enter the Product Description</h4>
+<input type="text" class="btn-primary" [(ngModel)]="productdesc">
+<button id="myButton2" class="btn-primary" name="submitButton" (click)="productdata()">Submit</button>
+<h4>{{value2}}</h4>
+<app-product [parentdata3]="parentdata3" [parentdata4]="parentdata4" [parentdata5]="parentdata5"(sendData2)="sendData2($event)"></app-product >
+
+<!-- <h3 style="text-align: center;">Product is dynamically added into Table</h3>
+<h4>Enter the ProductId</h4>
+<input type="text" class="btn-primary" [(ngModel)]="productId2">
+<h4>Enter the Product name</h4>
+<input type="text" class="btn-primary" [(ngModel)]="productname2">
+<h4>Enter the Product Description</h4>
+<input type="text" class="btn-primary" [(ngModel)]="productdesc2">
+<app-dynamic-table></app-dynamic-table> -->
+<label for="item-input">Add your name:</label>
+<input type="text" id="item-input" [(ngModel)]="newitem">
+<button type="button" (click)="addNewItem()">cllick</button>
+
+<app-dynamic-table  [parentdata6]=parentdata6></app-dynamic-table>
